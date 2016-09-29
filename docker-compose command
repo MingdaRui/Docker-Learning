@@ -3,3 +3,11 @@ Compose files using the verison 2 syntax must indicate the version number at the
 All services must be declared under the services Key.
 
 version 2 files are supported by Compose 1.6.0+ and require a Docker Engine of version 1.10.0+
+
+
+ports:
+Expose ports. Either specify both ports (HOST:CONTAINER), or just the container port (a random host port will be chosen)
+
+Note: When mapping ports in the HOST:CONTAINER format, you may experience erroneous results when using a container port
+lower than 60, because YAML will parse numbers in the format xx:yy as sexagesimal (base 60). FOr this reason, we recommend
+always explicitly speifying your port mappings as strings.
