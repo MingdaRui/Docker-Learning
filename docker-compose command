@@ -1,0 +1,5 @@
+Version 2:
+Compose files using the verison 2 syntax must indicate the version number at the root of the document.
+All services must be declared under the services Key.
+
+version 2 files are supported by Compose 1.6.0+ and require a Docker Engine of version 1.10.0+
